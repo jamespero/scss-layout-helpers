@@ -1,0 +1,45 @@
+@import "../variables";
+@import "./flexbox-helpers";
+@import "./spacing";
+
+.#{$utilityPrefix}-display-block {
+  display: block;
+}
+
+.#{$utilityPrefix}-display-inline {
+  display: inline;
+}
+
+.#{$utilityPrefix}-display-inline-block {
+  display: inline-block;
+}
+
+.#{$utilityPrefix}-overflow {
+  &-hidden {
+    overflow: hidden;
+  }
+
+  &-y-auto {
+    overflow-y: auto;
+  }
+
+  &-y-hidden {
+    overflow-y: hidden;
+  }
+
+  &-y-visible {
+    overflow-y: visible;
+  }
+
+  &-x-auto {
+    overflow-x: auto;
+  }
+
+  &-x-hidden {
+    overflow-x: hidden;
+  }
+
+  &-x-visible {
+    overflow-x: visible;
+  }
+}

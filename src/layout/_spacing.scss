@@ -1,0 +1,327 @@
+@use "sass:string";
+@import "../variables";
+
+$paddingLabel: "p";
+$marginLabel: "m";
+$leftLabel: "l";
+$rightLabel: "r";
+$topLabel: "t";
+$bottomLabel: "b";
+
+$paddingValues: (0, 1, 2, 3, 4, 5, 25, 28, 32, 50);
+$marginValues: (0, 1, 2, 3, 4, 5, 25, 28, 32, 50);
+
+/* PADDINGS */
+@mixin generate-padding() {
+  @each $padding in $paddingValues {
+    .#{$utilityPrefix}-#{$paddingLabel}-#{$padding} {
+      padding: #{$padding}rem;
+    }
+  }
+}
+
+.#{$utilityPrefix}-#{$paddingLabel}-05 {
+  padding: 0.5rem;
+}
+
+.#{$utilityPrefix}-#{$paddingLabel}-09 {
+  padding: 0.9rem;
+}
+
+.#{$utilityPrefix}-#{$paddingLabel}-1_8 {
+  padding: 1.8rem;
+}
+
+@mixin generate-padding-top() {
+  @each $padding in $paddingValues {
+    .#{$utilityPrefix}-#{$paddingLabel}-#{$topLabel}-#{$padding} {
+      padding-top: #{$padding}rem;
+    }
+  }
+}
+
+.#{$utilityPrefix}-#{$paddingLabel}-#{$topLabel}-05 {
+  padding-top: 0.5rem;
+}
+
+.#{$utilityPrefix}-#{$paddingLabel}-#{$topLabel}-09 {
+  padding-top: 0.9rem;
+}
+
+.#{$utilityPrefix}-#{$paddingLabel}-#{$topLabel}-1_8 {
+  padding-top: 1.8rem;
+}
+
+@mixin generate-padding-right() {
+  @each $padding in $paddingValues {
+    .#{$utilityPrefix}-#{$paddingLabel}-#{$rightLabel}-#{$padding} {
+      padding-right: #{$padding}rem;
+    }
+  }
+}
+
+.#{$utilityPrefix}-#{$paddingLabel}-#{$rightLabel}-05 {
+  padding-right: 0.5rem;
+}
+
+.#{$utilityPrefix}-#{$paddingLabel}-#{$rightLabel}-09 {
+  padding-right: 0.9rem;
+}
+
+.#{$utilityPrefix}-#{$paddingLabel}-#{$rightLabel}-1_8 {
+  padding-right: 1.8rem;
+}
+
+@mixin generate-padding-bottom() {
+  @each $padding in $paddingValues {
+    .#{$utilityPrefix}-#{$paddingLabel}-#{$bottomLabel}-#{$padding} {
+      padding-bottom: #{$padding}rem;
+    }
+  }
+}
+
+.#{$utilityPrefix}-#{$paddingLabel}-#{$bottomLabel}-05 {
+  padding-bottom: 0.5rem;
+}
+
+.#{$utilityPrefix}-#{$paddingLabel}-#{$bottomLabel}-09 {
+  padding-bottom: 0.9rem;
+}
+
+.#{$utilityPrefix}-#{$paddingLabel}-#{$bottomLabel}-1_8 {
+  padding-bottom: 1.8rem;
+}
+
+@mixin generate-padding-left() {
+  @each $padding in $paddingValues {
+    .#{$utilityPrefix}-#{$paddingLabel}-#{$leftLabel}-#{$padding} {
+      padding-left: #{$padding}rem;
+    }
+  }
+}
+
+.#{$utilityPrefix}-#{$paddingLabel}-#{$leftLabel}-05 {
+  padding-left: 0.5rem;
+}
+
+.#{$utilityPrefix}-#{$paddingLabel}-#{$leftLabel}-09 {
+  padding-left: 0.9rem;
+}
+
+.#{$utilityPrefix}-#{$paddingLabel}-#{$leftLabel}-1_8 {
+  padding-left: 1.8rem;
+}
+
+@mixin generate-padding-top-bottom() {
+  @each $padding in $paddingValues {
+    .#{$utilityPrefix}-#{$paddingLabel}-#{$topLabel}#{$bottomLabel}-#{$padding} {
+      padding-top: #{$padding}rem;
+      padding-bottom: #{$padding}rem;
+    }
+  }
+}
+
+.#{$utilityPrefix}-#{$paddingLabel}-#{$topLabel}#{$bottomLabel}-05 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.#{$utilityPrefix}-#{$paddingLabel}-#{$topLabel}#{$bottomLabel}-09 {
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+
+.#{$utilityPrefix}-#{$paddingLabel}-#{$topLabel}#{$bottomLabel}-1_8 {
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+}
+
+@mixin generate-padding-left-right() {
+  @each $padding in $paddingValues {
+    .#{$utilityPrefix}-#{$paddingLabel}-#{$leftLabel}#{$rightLabel}-#{$padding} {
+      padding-left: #{$padding}rem;
+      padding-right: #{$padding}rem;
+    }
+  }
+}
+
+.#{$utilityPrefix}-#{$paddingLabel}-#{$leftLabel}#{$rightLabel}-05 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.#{$utilityPrefix}-#{$paddingLabel}-#{$leftLabel}#{$rightLabel}-09 {
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+}
+
+.#{$utilityPrefix}-#{$paddingLabel}-#{$leftLabel}#{$rightLabel}-1_8 {
+  padding-left: 1.8rem;
+  padding-right: 1.8rem;
+}
+
+/* MARGINS */
+
+.#{$utilityPrefix}-#{$marginLabel}-05 {
+  margin: 0.5rem;
+}
+
+.#{$utilityPrefix}-#{$marginLabel}-09 {
+  margin: 0.9rem;
+}
+
+.#{$utilityPrefix}-#{$marginLabel}-1_8 {
+  margin: 1.8rem;
+}
+
+@mixin generate-margin() {
+  @each $margin in $marginValues {
+    .#{$utilityPrefix}-#{$marginLabel}-#{$margin} {
+      margin: #{$margin}rem;
+    }
+  }
+}
+
+.#{$utilityPrefix}-#{$marginLabel}-#{$topLabel}-05 {
+  margin-top: 0.5rem;
+}
+
+.#{$utilityPrefix}-#{$marginLabel}-#{$topLabel}-09 {
+  margin-top: 0.9rem;
+}
+
+.#{$utilityPrefix}-#{$marginLabel}-#{$topLabel}-1_8 {
+  margin-top: 1.8rem;
+}
+
+@mixin generate-margin-top() {
+  @each $margin in $marginValues {
+    .#{$utilityPrefix}-#{$marginLabel}-#{$topLabel}-#{$margin} {
+      margin-top: #{$margin}rem;
+    }
+  }
+}
+
+.#{$utilityPrefix}-#{$marginLabel}-#{$rightLabel}-05 {
+  margin-right: 0.5rem;
+}
+
+.#{$utilityPrefix}-#{$marginLabel}-#{$rightLabel}-09 {
+  margin-right: 0.9rem;
+}
+
+.#{$utilityPrefix}-#{$marginLabel}-#{$rightLabel}-1_8 {
+  margin-right: 1.8rem;
+}
+
+@mixin generate-margin-right() {
+  @each $margin in $marginValues {
+    .#{$utilityPrefix}-#{$marginLabel}-#{$rightLabel}-#{$margin} {
+      margin-right: #{$margin}rem;
+    }
+  }
+}
+
+.#{$utilityPrefix}-#{$marginLabel}-#{$bottomLabel}-05 {
+  margin-bottom: 0.5rem;
+}
+
+.#{$utilityPrefix}-#{$marginLabel}-#{$bottomLabel}-09 {
+  margin-bottom: 0.9rem;
+}
+
+.#{$utilityPrefix}-#{$marginLabel}-#{$bottomLabel}-1_8 {
+  margin-bottom: 1.8rem;
+}
+
+@mixin generate-margin-bottom() {
+  @each $margin in $marginValues {
+    .#{$utilityPrefix}-#{$marginLabel}-#{$bottomLabel}-#{$margin} {
+      margin-bottom: #{$margin}rem;
+    }
+  }
+}
+
+.#{$utilityPrefix}-#{$marginLabel}-#{$leftLabel}-05 {
+  margin-left: 0.5rem;
+}
+
+.#{$utilityPrefix}-#{$marginLabel}-#{$leftLabel}-09 {
+  margin-left: 0.9rem;
+}
+
+.#{$utilityPrefix}-#{$marginLabel}-#{$leftLabel}-1_8 {
+  margin-left: 1.8rem;
+}
+
+@mixin generate-margin-left() {
+  @each $margin in $marginValues {
+    .#{$utilityPrefix}-#{$marginLabel}-#{$leftLabel}-#{$margin} {
+      margin-left: #{$margin}rem;
+    }
+  }
+}
+
+.#{$utilityPrefix}-#{$marginLabel}-#{$topLabel}#{$bottomLabel}-05 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.#{$utilityPrefix}-#{$marginLabel}-#{$topLabel}#{$bottomLabel}-09 {
+  margin-top: 0.9rem;
+  margin-bottom: 0.9rem;
+}
+
+.#{$utilityPrefix}-#{$marginLabel}-#{$topLabel}#{$bottomLabel}-1_8 {
+  margin-top: 1.8rem;
+  margin-bottom: 1.8rem;
+}
+
+@mixin generate-margin-top-bottom() {
+  @each $margin in $marginValues {
+    .#{$utilityPrefix}-#{$marginLabel}-#{$topLabel}#{$bottomLabel}-#{$margin} {
+      margin-top: #{$margin}rem;
+      margin-bottom: #{$margin}rem;
+    }
+  }
+}
+
+.#{$utilityPrefix}-#{$marginLabel}-#{$leftLabel}#{$rightLabel}-05 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.#{$utilityPrefix}-#{$marginLabel}-#{$leftLabel}#{$rightLabel}-09 {
+  margin-left: 0.9rem;
+  margin-right: 0.9rem;
+}
+
+.#{$utilityPrefix}-#{$marginLabel}-#{$leftLabel}#{$rightLabel}-1_8 {
+  margin-left: 1.8rem;
+  margin-right: 1.8rem;
+}
+
+@mixin generate-margin-left-right() {
+  @each $margin in $marginValues {
+    .#{$utilityPrefix}-#{$marginLabel}-#{$leftLabel}#{$rightLabel}-#{$margin} {
+      margin-left: #{$margin}rem;
+      margin-right: #{$margin}rem;
+    }
+  }
+}
+
+@include generate-padding();
+@include generate-padding-bottom();
+@include generate-padding-left();
+@include generate-padding-left-right();
+@include generate-padding-right();
+@include generate-padding-top();
+@include generate-padding-top-bottom();
+
+@include generate-margin();
+@include generate-margin-bottom();
+@include generate-margin-left();
+@include generate-margin-left-right();
+@include generate-margin-right();
+@include generate-margin-top();
+@include generate-margin-top-bottom();
